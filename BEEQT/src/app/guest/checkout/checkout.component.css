@@ -1,0 +1,134 @@
+.price {
+  color: #16a085;
+  font-size: 17px;
+  font-weight: 700;
+  display: block;
+}
+input {
+  color: black;
+}
+.banner_box {
+  max-width: 1620px;
+  margin: auto;
+}
+.pro-checkout {
+  margin-top: 5rem;
+}
+.banner_area {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 5rem;
+}
+.banner_area .banner_inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* background: url(src/assets/imgshop/breadcrumb/checkout-bg.jpg) no-repeat
+    center bottom; */
+  background-size: contain;
+  z-index: 1;
+  height: 0px;
+}
+.banner_area .banner_inner .overlay {
+  background: rgba(0, 0, 0, 0.33);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.banner_area .banner_inner .banner_content {
+  position: relative;
+  z-index: 10;
+}
+.banner_area .banner_inner .banner_content h2 {
+  color: #ffffff;
+  font-size: 48px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 12px;
+  font-weight: 500;
+  margin-top: 120px;
+}
+.item-checkout {
+  margin-bottom: 5rem;
+}
+.banner_area .banner_inner .banner_content .page_link a {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  margin-right: 32px;
+  position: relative;
+}
+.banner_area .banner_inner .banner_content .page_link a:before {
+  content: "\e87a";
+  font-family: "Linearicons-Free";
+  font-size: 14px;
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.banner_area .banner_inner .banner_content .page_link a:last-child {
+  margin-right: 0px;
+}
+.banner_area .banner_inner .banner_content .page_link a:last-child:before {
+  display: none;
+}
+.banner_area .banner_inner .banner_content .page_link a:hover {
+  color: #1641ff;
+}
+.process-wrap {
+  width: 100%;
+  display: block;
+  float: left;
+  margin-left: 6rem;
+  margin-bottom: 3rem;
+}
+.process {
+  position: relative;
+  float: left;
+  width: 33.333%;
+  z-index: 0;
+}
+.process p {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: table;
+  border: 8px solid darkgrey;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #fff;
+  z-index: 1;
+  font-weight: 400;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.process p span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.process.active p span {
+  color: #FFC300;
+}
+.process.active p {
+  border: 8px solid #FFC300;
+}
+.process-af:after {
+  position: absolute;
+  top: 35%;
+  right: -37%;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #f0f0f0;
+  z-index: -1;
+}
+h3 {
+  font-size: 15px;
+  color: black;
+  font-family: sans-serif;
+}

@@ -1,0 +1,61 @@
+.cir-cart {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 10px;
+  float: left;
+  position: absolute;
+  right: 19.5rem;
+  top: -6px;
+  display: block;
+  text-align: center;
+  font-weight: 300;
+  width: 18px;
+  height: 18px;
+  background: #f89d13;
+  border-radius: 50%;
+}
+.cart-icon{
+  font-size: 1.5rem;
+  color: #123a8a;
+}
+.heart-icon{
+  font-size: 1.5rem;
+  color: #ff4081;
+}
+.cir-heart {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 10px;
+  float: left;
+  position: absolute;
+  right: 14.5rem;
+  top: -6px;
+  display: block;
+  text-align: center;
+  font-weight: 300;
+  width: 18px;
+  height: 18px;
+  background: #f89d13;
+  border-radius: 50%;
+}
+.user-icon {
+  font-size: 25px;
+  color: rebeccapurple;
+}
+.cir-user {
+  font-family: 'Oxygen';
+  float: left;
+  position: absolute;
+  right: 9.5rem;
+  top: -6px;
+  display: block;
+  text-align: center;
+  font-weight: 300;
+  width: 18px;
+  height: 18px;
+}
+li {
+  margin-right: 1rem;
+}

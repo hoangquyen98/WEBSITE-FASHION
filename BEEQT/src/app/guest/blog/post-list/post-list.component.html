@@ -1,0 +1,90 @@
+<app-header></app-header>
+<div id="wrapper">
+  <div class="page-title wb">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs-down hidden-sm-down bg-bread">
+                  <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Blog</a></li>
+                  </ol>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <section class="section wb mt-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                  <div class="page-wrapper">
+                      <div class="blog-list clearfix">
+                          <div class="blog-box row mb-5" *ngFor="let post of posts">
+                              <div class="col-md-4">
+                                  <div class="post-media">
+                                      <a href="#" title="">
+                                          <img [src]="post.imagePath" alt="" class="img-fluid img-blog">
+                                          <div class="hovereffect"></div>
+                                      </a>
+                                  </div>
+                              </div>
+
+                              <div class="blog-meta big-meta col-md-8">
+                                  <span class="bg-aqua"><a href="#" title="">New</a></span>
+                                  <h4><a href="#" title="">{{post.title}}</a></h4>
+                                  <p>{{post.content}}</p>
+                                  <small><a href="#" title="">{{post.date}} / </a></small>
+                                  <small><a href="#" title="">by Matilda</a></small>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <div>
+                    <div class="widget mb-5">
+                        <h6 class="widget-title">Search</h6>
+                        <form [formGroup]="form"  class="form-inline search-form ">
+                            <div class="form-group">
+                                <input type="text" class="form-control mr-3" placeholder="Search on the site">
+                            </div>
+                            <button type="submit" class="btn btn-primary"><span class="icon-search"></span></button>
+                        </form>
+                    </div>
+
+                    <div class="widget">
+                        <h6 class="widget-title">Recent Posts</h6>
+                        <div class="blog-list-widget">
+                            <div class="list-group">
+                                <a *ngFor="let post of posts" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="w-100 last-item justify-content-between">
+                                        <img [src]="post.imagePath" alt="" class="img-fluid float-left img-recent">
+                                        <p class="mb-1">{{post.title}}</p>
+                                        <small>{{post.date}}</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                      <h6 class="widget-title">Advertising</h6>
+                      <div class="banner-spot clearfix">
+                          <div class="banner-img">
+                              <img [src]="posts[0].imagePath" alt="" class="img-fluid">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+  </section>
+</div>
+
+<mat-paginator class="col-lg-12 col-md-12 col-sm-12 col-xs-12" [length]="totalPosts"
+              [pageSize]="postsPerPage"
+              [pageSizeOptions]="pageSizeOptions"
+              (page)="onChangedPage($event)">
+</mat-paginator>
+<app-footer></app-footer>
+

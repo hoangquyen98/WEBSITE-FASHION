@@ -1,0 +1,38 @@
+<section class="login_box_area p_120">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<img class="img-fluid" src="../../../assets/images/login.jpg" alt="">
+						<div class="hover">
+							<a href="/home"><h4 style="color: wheat;">View Bee.Q.T Shop</h4></a>
+              <p style="color: wheat;">An exciting place for the whole family to shop.</p>
+              <a class="main_btn" href="/auth/signup">Create an Account</a>
+            </div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+            <h3>Login to Enter</h3>
+            <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+              <mat-form-field>
+                  <input matInput name="email" ngModel type="email" placeholder="E-mail" #emailInput="ngModel" required email>
+                  <mat-error *ngIf="emailInput.invalid">Please enter a valid email</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput name="password" ngModel type="password" placeholder="Password" #passwordInput="ngModel" required password>
+                <mat-error *ngIf="passwordInput.invalid">Please enter a valid password</mat-error>
+              </mat-form-field>
+
+              <button mat-raised-button color="primary" type="submit" class="mr-login">Login</button>
+              <a (click)="enterEmail()" class="forgot-pwd"><span>Forgot Password?</span></a>
+            </form>
+            <a (click)="signInWithGoogle()" class="fxac forgot-pwd social-buttons--social-btn--1JTo2 google-auth--social-btn--google--1H6_f"><img src="../../../assets/images/google.png" class="google-icon">Continue with Google</a>
+            <a (click)="signInWithFB()" class="fxac forgot-pwd social-buttons--social-btn--1JTo2 google-auth--social-btn--google--1H6_f"><img src="../../../assets/images/facebook.png" class="facebook-icon">Continue with Facebook</a>
+		  	</div>
+		</div>
+	</div>
+</section>
+
+
+
+

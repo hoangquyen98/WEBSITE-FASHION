@@ -1,0 +1,134 @@
+<app-header></app-header>
+<section class="banner_area">
+  <div class="banner_inner d-flex align-items-center">
+    <div class="container">
+      <div class="banner_content text-center">
+        <h2 class="mb-5">Shop Bee.Q.T</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cat_product_area section_gap">
+  <div class="container-fluid">
+    <div class="row flex-row-reverse">
+      <div class="col-lg-9">
+        <div class="product_top_bar">
+          <div class="left_dorp">
+           <h4 class="title-shop">Fashion Bee.Q.T</h4>
+          </div>
+          <div class="right_page ml-auto">
+            <nav class="cat_page" aria-label="Page navigation example">
+              <mat-paginator [length]="totalProduct"
+                [pageSize]="productsPerPage"
+                [pageSizeOptions]="pageSizeOptions"
+                (page)="onChangedPage($event)">
+              </mat-paginator>
+            </nav>
+          </div>
+        </div>
+        <div class="latest_product_inner row">
+          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of products">
+            <div class="f_p_item">
+              <div class="f_p_img">
+                <img class="img-fluid image-shop" [src]="product.productImageUrl" alt="">
+                <div class="p_icon">
+                  <a (click)="onAddProductToWishList(product.productId,product.id)">
+                    <i class="icon-heart" style="color: #ff4081;"></i>
+                  </a>
+                  <a (click)="onAddProductToCart(product.productId,product.id)">
+                    <i class="icon-shopping-cart" style="color: #ff4081;"></i>
+                  </a>
+                  <a  [routerLink]="['product-details/',  product.id ]">
+                    <i class="fa fa-eye" style="color: #ff4081;"></i>
+                  </a>
+                </div>
+              </div>
+              <a href="#">
+                <h4>{{product.productName}}</h4>
+              </a>
+              <h5>${{product.productPrice}}</h5>
+              <div class="add-to-cart">
+                  <a class="add_to_btn" (click)="onAddProductToCart(product.productId,product.id)">+ Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="left_sidebar_area">
+          <aside class="left_widgets cat_widgets">
+            <div class="l_w_title">
+              <h3 style="margin:0">Browse Categories</h3>
+            </div>
+            <div class="widgets_inner">
+              <ul class="list">
+                <li>
+                  <a href="#"> Vintage Fashion Style</a>
+                </li>
+                <li>
+                  <a href="#">Bohemian Fashion Style</a>
+                </li>
+                <li>
+                  <a href="#">Chic Fashion Style</a>
+
+                </li>
+                <li>
+                  <a href="#">Artsy Fashion Style</a>
+                </li>
+                <li>
+                  <a href="#">Sexy Fashion Style</a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <aside class="left_widgets p_filter_widgets">
+            <div class="l_w_title">
+              <h3>Product Filters</h3>
+            </div>
+            <div class="widgets_inner">
+              <h4>Brand</h4>
+              <ul class="list">
+                <li>
+                  <a href="#">Apple</a>
+                </li>
+                <li>
+                  <a href="#">Asus</a>
+                </li>
+                <li class="active">
+                  <a href="#">Gionee</a>
+                </li>
+                <li>
+                  <a href="#">Micromax</a>
+                </li>
+                <li>
+                  <a href="#">Samsung</a>
+                </li>
+              </ul>
+            </div>
+            <div class="widgets_inner">
+              <h4>Color</h4>
+              <ul class="list">
+                <li>
+                  <a href="#">Black</a>
+                </li>
+                <li>
+                  <a href="#">Black Leather</a>
+                </li>
+                <li class="active">
+                  <a href="#">Black with red</a>
+                </li>
+                <li>
+                  <a href="#">Gold</a>
+                </li>
+                <li>
+                  <a href="#">Spacegrey</a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

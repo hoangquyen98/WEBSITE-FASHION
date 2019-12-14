@@ -1,0 +1,38 @@
+.product-image img {
+  margin: auto;
+}
+th{
+  vertical-align: middle;
+}
+.product-detail .product-head {
+  padding: 10px;
+  font-weight: 500;
+}
+
+.product-detail .table th {
+  width: 200px;
+}
+
+.product-ship {
+  height: 15rem;
+}
+main {
+  margin-bottom: 5rem;
+}
+.lh-condensed {
+  width: 87%;
+  margin: auto;
+  color: black;
+}
+.text-muted {
+  color: red!important;
+  font-weight: bold;
+  font-size: 16px;
+}
+.img-item {
+  width: 300px;
+  height: 350px;
+  object-fit: fill;
+  border-radius: 15px;
+}
+

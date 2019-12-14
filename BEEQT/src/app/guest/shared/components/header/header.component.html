@@ -1,0 +1,79 @@
+<div class="site-mobile-menu site-navbar-target">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>
+
+<div class="top-bar py-1 bg-light" id="home-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-6 text-left">
+        <ul class="social-media">
+          <li><a href="#" class=""><span class="icon-facebook"></span></a></li>
+          <li><a href="#" class=""><span class="icon-twitter"></span></a></li>
+          <li><a href="#" class=""><span class="icon-instagram"></span></a></li>
+          <li><a href="#" class=""><span class="icon-linkedin"></span></a></li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <p class="mb-0 float-right">
+          <span class="mr-3"><a href="tel://#"> <span class="icon-phone mr-2" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black">(+84) 987 654 030</span></a></span>
+          <span><a href="#"><span class="icon-envelope mr-2" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black">hoangthuyquyen@gmail.com</span></a></span>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="site-navbar py-3 bg-white js-sticky-header site-navbar-target" role="banner">
+
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-6 col-xl-2">
+        <h1 class="mb-0 site-logo"><a href="index.html" class="text-black mb-0" style="
+          font-style: italic;">Bee<span class="text-primary">.</span>Q<span class="text-primary">.</span>T</a></h1>
+      </div>
+      <div class="col-12 col-md-10 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+            <li><a href="/home" class="nav-link">HOME</a></li>
+            <li><a href="/home/shop" class="nav-link">SHOP</a></li>
+            <li><a href="/home/blog" class="nav-link">BLOG</a></li>
+
+            <li *ngIf="userIsAuthenticated">
+              <a  routerLink="/home/cart" class="nav-link">
+                <i class="fa fa-cart-plus cart-icon" aria-hidden="true"></i>
+                <span class="cir-cart">{{itemCount}}</span>
+              </a></li>
+            <li *ngIf="userIsAuthenticated">
+              <a  routerLink="/home/wishlist" class="nav-link">
+                <i class="fa fa-heart heart-icon" aria-hidden="true"></i>
+                <span class="cir-heart">{{wishCount}}</span>
+              </a>
+            </li>
+            <li *ngIf="userIsAuthenticated">
+              <a routerLink="/home/my-account"class="nav-link">
+                <i class="fa fa-user user-icon " aria-hidden="true"></i>
+                <span class="cir-user">{{user.firstName}}</span>
+              </a>
+            </li>
+            <li *ngIf="userIsAuthenticated" (click)="onLogout()">
+              <a style="cursor: pointer;" class="nav-link">LOG OUT<i class="fa fa-sign-in" aria-hidden="true" style="
+                color: red;"></i>
+              </a>
+            </li>
+            <li *ngIf="!userIsAuthenticated"><a routerLink="/auth/login" class="nav-link">LOGIN</a></li>
+            <li *ngIf="!userIsAuthenticated"><a routerLink="/auth/signup" class="nav-link">SING UP</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+    </div>
+  </div>
+</header>

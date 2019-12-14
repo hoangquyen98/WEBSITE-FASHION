@@ -1,0 +1,76 @@
+.account-profile {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%!important;
+  padding: 30px 20px 20px!important;
+  background: #fff;
+  border-radius: 4px;
+}
+.content {
+  margin:auto;
+  /* width: 65%; */
+}
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+.control-label {
+  float: left;
+  width: 20%;
+  font-size: 15px;
+  margin-bottom: 0;
+  color: black;
+}
+.input-wrap {
+  display: inline-block;
+}
+.birthday-picker select {
+  display: inline-block;
+  width: 15%;
+  margin-right: 20px;
+}
+.birthday-picker{
+  width: 100%;
+}
+.m-gender{
+  margin: 0px 20px 0px 15px;
+}
+.avatar {
+  vertical-align: middle;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10%;
+  margin-bottom: 10px
+}
+.container {
+  padding: 80px;
+}
+.entry-header {
+  background: #9A9285;
+  margin-bottom: -12px;
+  border-bottom: 0;
+}
+.title-container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 18px;
+  color: white;
+}
+.entry-title, .page-title {
+  text-transform: none;
+  font-size: 24px;
+}
+.page-title {
+  float: none;
+  text-align: center;
+}
+.form-control{
+  width: 38rem;
+  color: black;
+}
+input[type="file"] {
+  visibility: hidden;
+}
+.mra-15 {
+  margin: 0px 15px;
+}

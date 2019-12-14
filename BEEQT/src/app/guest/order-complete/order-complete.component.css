@@ -1,0 +1,88 @@
+.height {
+  min-height: 200px;
+}
+
+.icon {
+  font-size: 47px;
+  color: #5CB85C;
+}
+
+.iconbig {
+  font-size: 77px;
+  color: #5CB85C;
+}
+
+.table > tbody > tr > .emptyrow {
+  border-top: none;
+}
+
+.table > thead > tr > .emptyrow {
+  border-bottom: none;
+}
+
+.table > tbody > tr > .highrow {
+  border-top: 3px solid;
+}
+.content-bill {
+  width: 95%;
+  color: black;
+  margin: auto;
+}
+.process-wrap {
+  width: 100%;
+  display: block;
+  float: left;
+  margin-left: 6rem;
+  margin-bottom: 3rem;
+}
+.process {
+  position: relative;
+  float: left;
+  width: 33.333%;
+  z-index: 0;
+}
+.process p {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: table;
+  border: 8px solid darkgrey;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #fff;
+  z-index: 1;
+  font-weight: 400;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.process p span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.process.active p span {
+  color: #FFC300;
+}
+.process.active p {
+  border: 8px solid #FFC300;
+}
+.process-af:after {
+  position: absolute;
+  top: 35%;
+  right: -37%;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #f0f0f0;
+  z-index: -1;
+}
+.pro-checkout {
+  margin-top: 5rem;
+}
+h3 {
+  font-size: 15px;
+  color: black;
+  font-family: sans-serif;
+}

@@ -1,0 +1,64 @@
+<app-header></app-header>
+<section class="banner_area">
+  <div class="banner_inner d-flex align-items-center">
+    <div class="container">
+      <div class="banner_content text-center">
+        <h2 class="mb-5">MY WISHLIST</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cart_area">
+  <div class="container">
+    <div class="cart_inner">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr class="title-cart">
+              <th></th>
+              <th scope="col">Product</th>
+              <th scope="col">Price</th>
+              <th scope="col">Buy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of wish ">
+              <td>
+                <div class="image">
+                    <img class="img-cart" [src]="item.productImageUrl" alt="">
+                </div>
+              </td>
+              <td class="space-col">
+                <div class="media">
+                  <div class="media-body  text-center">
+                    <h6>{{item.productName}}</h6>
+                  </div>
+                </div>
+              </td>
+              <td class="text-center">
+                <h6>${{item.productPrice}}</h6>
+              </td>
+              <td class="text-center">
+                  <button class="btn  btn-primary" (click)="onAddProductToCartWish(item.productId,item._id)">Add to cart</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <h6>Subtotal</h6>
+              </td>
+              <td >
+
+              </td>
+              <td class="text-center" >
+                  <h6>${{total}}</h6>
+              </td>
+              <td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

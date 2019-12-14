@@ -1,0 +1,73 @@
+<app-header></app-header>
+<main class="mt-5 pt-4">
+
+  <div class="container dark-grey-text mt-5">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="product-image">
+          <div class="view hm-zoom z-depth-2" style="cursor: pointer">
+            <div class="d-flex product-image pt-2">
+              <img [src]="product.productImageUrl"
+                class="img-fluid img-item" >
+            </div>
+          </div>
+          <!-- <div class="" style="margin-top:15px">
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Price : </h6>
+                </div>
+                <span class="text-muted" >${{product.productPrice}}</span>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+      <div class="col-sm-8" style="color: black;">
+        <div class="product-detail">
+          <h5 class="product-head">Product Details</h5>
+          <table class="table" cellspacing="0" style="max-height: 28px">
+            <tbody>
+              <tr>
+                <th scope="row">Product Name :</th>
+                <td>{{product.productName}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Product Description :</th>
+                <td>{{product.productDescription}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Product Category :</th>
+                <td>
+                  <a href="">
+                    <span class="badge purple mr-1">{{product.productCategory}}</span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                  <th scope="row">Price </th>
+                  <td>
+                    <a href="">
+                      <span class="badge purple mr-1">${{product.productPrice}}</span>
+                    </a>
+                  </td>
+                </tr>
+              <tr>
+                <td style="display:flex">
+                  <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px; margin-top: 3rem; margin-right: 2rem"  >
+                  <button class="btn btn-primary btn-md my-0 p" (click)="onAddToCart(product.productId,product.id)" style="margin-top: 3rem!important;">Add to cart
+                          <i class="fa fa-cart-plus cart-icon ml-1"></i>
+                  </button>
+                </td>
+                <th></th>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>

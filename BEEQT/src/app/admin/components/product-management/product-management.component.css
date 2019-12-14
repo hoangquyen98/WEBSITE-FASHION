@@ -1,0 +1,25 @@
+.example-container {
+  height: 520px;
+  overflow: auto;
+  width: 95%;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+}
+.mat-header-row {
+  background-color: #f44336;
+}
+.mat-header-cell {
+  color: white;
+  font-size: 15px;
+}
+.search-content {
+  margin-top: 5rem;
+  /* width: 50%; */
+  margin-left: 1.6rem;
+}
+.add-product {
+  margin-right: auto;
+}
